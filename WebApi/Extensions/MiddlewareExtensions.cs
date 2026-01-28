@@ -9,4 +9,9 @@ public static class MiddlewareExtensions
         return app.UseMiddleware<Middleware.GlobalExceptionMiddleware>();
     }
 
+    public static IApplicationBuilder UsePerformanceMonitoring(this IApplicationBuilder app)
+    {
+        return app.UseMiddleware<Middleware.PerformanceMiddleware>();
+    }
+
 }
